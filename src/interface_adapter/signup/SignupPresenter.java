@@ -1,5 +1,6 @@
 package interface_adapter.signup;
 
+import interface_adapter.clear_users.ClearViewModel;
 import interface_adapter.login.LoginState;
 import interface_adapter.login.LoginViewModel;
 import interface_adapter.ViewManagerModel;
@@ -13,13 +14,16 @@ public class SignupPresenter implements SignupOutputBoundary {
 
     private final SignupViewModel signupViewModel;
     private final LoginViewModel loginViewModel;
+    private final ClearViewModel clearViewModel;
     private ViewManagerModel viewManagerModel;
 
     public SignupPresenter(ViewManagerModel viewManagerModel,
                            SignupViewModel signupViewModel,
+                           ClearViewModel clearViewModel,
                            LoginViewModel loginViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.signupViewModel = signupViewModel;
+        this.clearViewModel = clearViewModel;
         this.loginViewModel = loginViewModel;
     }
 
